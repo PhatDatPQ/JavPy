@@ -1,0 +1,18 @@
+{
+  "config.db": {
+    "Global::version": "",
+    "Global::proxy": "",
+    "Global::ip-blacklist": [],
+    "Global::ip-whitelist": [],
+    "User::default": {
+      "password": ""
+    }
+  },
+
+  "default.db": {
+    "stars::video": [],
+    "stars::actress": [],
+    "history::visited": [],
+    "history::searched": []
+  }
+}

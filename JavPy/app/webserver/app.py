@@ -18,6 +18,7 @@ import JavPy.utils.buggyauth as auth
 from copy import deepcopy
 import requests
 from JavPy.utils.config import proxy
+from JavPy.utils.db import config_db
 
 
 base_path = "/".join(os.path.abspath(__file__).replace("\\", "/").split("/")[:-3])
@@ -184,6 +185,12 @@ def actress_info():
     rsp = jsonify(res.to_dict())
     rsp.headers["Access-Control-Allow-Origin"] = "*"
     return rsp
+
+
+@app.route("/star", methods=["POST"])
+def star():
+    params = json.loads(request.data.decode("utf-8"))
+    print(params)
 
 
 # dmm.co.jp blocks direct image request. so use this proxy when there is a loading error.
